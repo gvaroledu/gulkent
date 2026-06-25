@@ -1,0 +1,111 @@
+/*
+  Tema seçici ve üst yerleşim düzeltmeleri
+*/
+
+html[data-theme] {
+  --theme-switcher-height: 52px;
+}
+
+.theme-switcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999; /* En ustte kalmasi icin */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100vw - 20px);
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 250, 244, 0.88);
+  border: 1px solid rgba(48, 52, 59, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 14px 34px rgba(48, 52, 59, 0.12);
+  pointer-events: auto;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Wavy tema secilince renk paletine yer acmak icin sola kaydir */
+html[data-theme="wavy"] .theme-switcher {
+  right: 96px;
+}
+
+.theme-switcher__label {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding-left: 6px;
+  white-space: nowrap;
+}
+
+.theme-switcher__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.theme-switcher__button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-switcher__button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(48, 52, 59, 0.12);
+}
+
+.theme-switcher__button[aria-pressed="true"] {
+  background: var(--color-coral);
+  color: #fff;
+  border-color: rgba(237, 93, 77, 0.28);
+  box-shadow: 0 12px 24px rgba(255, 120, 104, 0.22);
+}
+
+/* Header artik yukari itilmiyor */
+html[data-theme] .header {
+  top: 0px;
+}
+
+html[data-theme] .header__mobile-menu {
+  top: 0px;
+}
+
+@media (max-width: 768px) {
+  html[data-theme] .header {
+    top: 0px;
+  }
+
+  html[data-theme] .header__mobile-menu {
+    top: 0px;
+  }
+
+  .theme-switcher {
+    bottom: 16px;
+    right: 16px;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  html[data-theme="wavy"] .theme-switcher {
+    right: 88px;
+  }
+
+  .theme-switcher__label {
+    display: none;
+  }
+}

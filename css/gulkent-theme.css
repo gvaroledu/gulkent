@@ -1,0 +1,607 @@
+/*
+  Gulkent theme
+  Owns the Gulkent illustrated background only. Pastel waves, section color
+  bands, and animated wave separators belong exclusively to wavy-theme.css.
+*/
+
+html[data-theme="gulkent"] {
+  --gulkent-bg-color: #fffaf4;
+  --gulkent-bg-image: url("../assets/img/background/gulkent-bg-main.png");
+  --gulkent-glass-rgb: 255 255 255;
+  --gulkent-glass-alpha: 0.14;
+  --gulkent-glass-highlight-alpha: 0.2;
+  --gulkent-glass-tint-alpha: 0.06;
+  --gulkent-glass-border-alpha: 0.42;
+  --gulkent-glass-blur: 18px;
+  --gulkent-glass-saturate: 1.16;
+  --gulkent-glass-bg: rgb(
+    var(--gulkent-glass-rgb) / var(--gulkent-glass-alpha)
+  );
+  --gulkent-glass-border: rgb(255 255 255 / var(--gulkent-glass-border-alpha));
+  --gulkent-glass-shadow: 0 22px 64px rgba(48, 52, 59, 0.09);
+  min-height: 100%;
+  background-color: var(--gulkent-bg-color) !important;
+}
+
+html[data-theme="gulkent"] body {
+  min-height: 100%;
+  margin: 0;
+  position: relative;
+  background-color: var(--gulkent-bg-color) !important;
+  background-image: none !important;
+}
+
+html[data-theme="gulkent"] body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  transform: translateX(-50%);
+  background-color: var(--gulkent-bg-color);
+  background-image: var(--gulkent-bg-image);
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
+html[data-theme="gulkent"] body > * {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="gulkent"] main,
+html[data-theme="gulkent"] #page-content,
+html[data-theme="gulkent"] .page-wrapper,
+html[data-theme="gulkent"] .site-wrapper,
+html[data-theme="gulkent"] .app,
+html[data-theme="gulkent"] .hero,
+html[data-theme="gulkent"] .section,
+html[data-theme="gulkent"] .services,
+html[data-theme="gulkent"] .clinic,
+html[data-theme="gulkent"] .doctors,
+html[data-theme="gulkent"] .calm-care,
+html[data-theme="gulkent"] #asi-hesaplayici,
+html[data-theme="gulkent"] .appointment-cta,
+html[data-theme="gulkent"] .contact {
+  background: transparent !important;
+}
+
+html[data-theme="gulkent"] .section > .container,
+html[data-theme="gulkent"] .hero .container,
+html[data-theme="gulkent"] #asi-hesaplayici .container {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="gulkent"] .hero .container {
+  max-width: var(--container);
+  padding-inline: 24px;
+}
+
+html[data-theme="gulkent"] .section > .container,
+html[data-theme="gulkent"] .hero .container,
+html[data-theme="gulkent"] #asi-hesaplayici .container {
+  isolation: isolate;
+}
+
+html[data-theme="gulkent"] .section > .container::before,
+html[data-theme="gulkent"] .hero .container::before,
+html[data-theme="gulkent"] #asi-hesaplayici .container::before {
+  content: "";
+  position: absolute;
+  inset: clamp(-14px, -1.2vw, -8px) clamp(-8px, -0.7vw, -4px);
+  z-index: 0;
+  pointer-events: none;
+  border: 1px solid var(--gulkent-glass-border);
+  border-radius: clamp(22px, 2.8vw, 38px);
+  background:
+    linear-gradient(
+      135deg,
+      rgb(var(--gulkent-glass-rgb) / var(--gulkent-glass-highlight-alpha)),
+      rgb(var(--gulkent-glass-rgb) / var(--gulkent-glass-tint-alpha))
+    ),
+    var(--gulkent-glass-bg);
+  box-shadow: var(--gulkent-glass-shadow);
+  backdrop-filter: blur(var(--gulkent-glass-blur))
+    saturate(var(--gulkent-glass-saturate));
+  -webkit-backdrop-filter: blur(var(--gulkent-glass-blur))
+    saturate(var(--gulkent-glass-saturate));
+  outline: 1px solid rgba(255, 255, 255, 0.14);
+  outline-offset: -2px;
+}
+
+html[data-theme="gulkent"] .section > .container > *,
+html[data-theme="gulkent"] .hero .container > *,
+html[data-theme="gulkent"] #asi-hesaplayici .container > * {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="gulkent"] .services::before,
+html[data-theme="gulkent"] .services::after,
+html[data-theme="gulkent"] .hero::before,
+html[data-theme="gulkent"] .hero::after,
+html[data-theme="gulkent"] .hero__blob,
+html[data-theme="gulkent"] .clinic::before,
+html[data-theme="gulkent"] .doctors::before,
+html[data-theme="gulkent"] .doctors::after,
+html[data-theme="gulkent"] .contact::before,
+html[data-theme="gulkent"] .services .section-decor::before,
+html[data-theme="gulkent"] .services .section-decor::after,
+html[data-theme="gulkent"] .clinic .section-decor::before,
+html[data-theme="gulkent"] .clinic .section-decor::after,
+html[data-theme="gulkent"] .doctors .section-decor::before,
+html[data-theme="gulkent"] .doctors .section-decor::after,
+html[data-theme="gulkent"] .calm-care .section-decor::before,
+html[data-theme="gulkent"] .calm-care .section-decor::after,
+html[data-theme="gulkent"] #asi-hesaplayici::before,
+html[data-theme="gulkent"] #asi-hesaplayici::after,
+html[data-theme="gulkent"] .appointment-cta .section-decor::before,
+html[data-theme="gulkent"] .appointment-cta .section-decor::after,
+html[data-theme="gulkent"] .contact .section-decor::before,
+html[data-theme="gulkent"] .contact .section-decor::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  animation: none !important;
+}
+
+html[data-theme="gulkent"] .hero {
+  min-height: min(620px, 74vh);
+  padding: 78px 0 42px;
+}
+
+html[data-theme="gulkent"] .hero__grid {
+  grid-template-columns: minmax(0, 0.94fr) minmax(300px, 0.78fr);
+  gap: clamp(24px, 3.2vw, 44px);
+}
+
+html[data-theme="gulkent"] .hero__content {
+  gap: 16px;
+}
+
+html[data-theme="gulkent"] .hero__title {
+  font-size: clamp(2.7rem, 4.4vw, 3.7rem);
+}
+
+html[data-theme="gulkent"] .hero__desc {
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+html[data-theme="gulkent"] .hero__visual {
+  min-height: 410px;
+}
+
+html[data-theme="gulkent"] .hero__image {
+  width: min(330px, 66%);
+  border: 10px solid rgba(255, 255, 255, 0.62);
+  box-shadow: 0 28px 70px rgba(48, 52, 59, 0.14);
+  filter: none;
+}
+
+html[data-theme="gulkent"] .hero__trust {
+  gap: 12px 26px;
+}
+
+html[data-theme="gulkent"] .quick-actions {
+  margin-top: -28px;
+}
+
+html[data-theme="gulkent"] .quick-card,
+html[data-theme="gulkent"] .quick-card--mint,
+html[data-theme="gulkent"] .quick-card--pink,
+html[data-theme="gulkent"] .quick-card--yellow,
+html[data-theme="gulkent"] .quick-card--lavender,
+html[data-theme="gulkent"] .service-card,
+html[data-theme="gulkent"] .doctor-card,
+html[data-theme="gulkent"] .contact-card,
+html[data-theme="gulkent"] .contact-card--mint,
+html[data-theme="gulkent"] .contact-card--blue,
+html[data-theme="gulkent"] .contact-card--lavender,
+html[data-theme="gulkent"]
+  #asi-hesaplayici
+  [style*="background:var(--color-surface)"] {
+  background:
+    linear-gradient(
+      135deg,
+      rgb(var(--gulkent-glass-rgb) / var(--gulkent-glass-highlight-alpha)),
+      rgb(var(--gulkent-glass-rgb) / var(--gulkent-glass-tint-alpha))
+    ),
+    var(--gulkent-glass-bg) !important;
+  border: 1px solid rgba(48, 52, 59, 0.08) !important;
+  box-shadow: 0 18px 52px rgba(48, 52, 59, 0.08) !important;
+  backdrop-filter: blur(var(--gulkent-glass-blur))
+    saturate(var(--gulkent-glass-saturate)) !important;
+  -webkit-backdrop-filter: blur(var(--gulkent-glass-blur))
+    saturate(var(--gulkent-glass-saturate)) !important;
+}
+
+html[data-theme="gulkent"] .quick-card::before,
+html[data-theme="gulkent"] .service-card::before,
+html[data-theme="gulkent"] .doctor-card::before,
+html[data-theme="gulkent"] .contact-card::before {
+  content: none !important;
+  display: none !important;
+}
+
+html[data-theme="gulkent"] .quick-card__icon,
+html[data-theme="gulkent"] .contact-card__icon,
+html[data-theme="gulkent"] .clinic__feature {
+  background: rgba(255, 255, 255, 0.38) !important;
+  border: 1px solid rgba(48, 52, 59, 0.07);
+}
+
+html[data-theme="gulkent"] .quick-actions .container {
+  max-width: var(--container);
+}
+
+html[data-theme="gulkent"] .quick-actions__grid {
+  gap: 16px;
+}
+
+html[data-theme="gulkent"] .quick-card {
+  min-height: 132px;
+  padding: 22px 22px;
+  gap: 9px;
+}
+
+html[data-theme="gulkent"] .quick-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  font-size: 1.35rem;
+}
+
+html[data-theme="gulkent"] .quick-card__title {
+  font-size: 1.02rem;
+  font-weight: 900;
+}
+
+html[data-theme="gulkent"] .quick-card__desc {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.42;
+  color: rgba(48, 52, 59, 0.72);
+}
+
+html[data-theme="gulkent"] .contact {
+  padding-top: 54px !important;
+  padding-bottom: 48px !important;
+}
+
+html[data-theme="gulkent"] .contact .section-title {
+  font-size: clamp(2.25rem, 4.2vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+html[data-theme="gulkent"] .contact__grid {
+  gap: 16px;
+  margin-top: 26px;
+}
+
+html[data-theme="gulkent"] .contact-card {
+  min-height: 118px;
+  padding: 22px 22px;
+  gap: 7px;
+}
+
+html[data-theme="gulkent"] .contact-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  font-size: 1.25rem;
+}
+
+html[data-theme="gulkent"] .contact-card__label {
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: rgba(48, 52, 59, 0.7);
+}
+
+html[data-theme="gulkent"] .contact-card__value {
+  font-size: clamp(1.12rem, 1.25vw, 1.3rem);
+  font-weight: 900;
+  line-height: 1.18;
+  color: var(--color-text);
+}
+
+html[data-theme="gulkent"] .contact-card__hint {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgba(48, 52, 59, 0.7);
+}
+
+html[data-theme="gulkent"] .service-card__body,
+html[data-theme="gulkent"] .doctor-card__body {
+  background: transparent !important;
+}
+
+html[data-theme="gulkent"] .service-card__image {
+  border: 14px solid rgba(255, 255, 255, 0.58);
+  border-bottom: 0;
+  background-clip: content-box;
+}
+
+html[data-theme="gulkent"] .clinic__panel,
+html[data-theme="gulkent"] .calm-care .clinic__panel,
+html[data-theme="gulkent"] .doctors__team-photo {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html[data-theme="gulkent"] .clinic__panel::before,
+html[data-theme="gulkent"] .appointment-cta__panel::before,
+html[data-theme="gulkent"] .appointment-cta__panel::after {
+  content: none !important;
+  display: none !important;
+}
+
+html[data-theme="gulkent"] .appointment-cta__panel {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html[data-theme="gulkent"] .appointment-cta__title {
+  color: var(--color-text) !important;
+}
+
+html[data-theme="gulkent"] .appointment-cta__desc {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="gulkent"] .appointment-cta__image {
+  box-shadow: 0 18px 44px rgba(48, 52, 59, 0.12);
+}
+
+html[data-theme="gulkent"] .footer {
+  background: transparent !important;
+  border-top: 0;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding-top: 42px;
+  padding-bottom: 24px;
+}
+
+html[data-theme="gulkent"] .footer .container {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  padding: 26px 32px 20px;
+}
+
+html[data-theme="gulkent"] .footer .container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border: 1px solid var(--gulkent-glass-border);
+  border-radius: clamp(22px, 2.8vw, 34px);
+  background:
+    linear-gradient(
+      135deg,
+      rgb(var(--gulkent-glass-rgb) / var(--gulkent-glass-highlight-alpha)),
+      rgb(var(--gulkent-glass-rgb) / var(--gulkent-glass-tint-alpha))
+    ),
+    var(--gulkent-glass-bg);
+  box-shadow: var(--gulkent-glass-shadow);
+  backdrop-filter: blur(var(--gulkent-glass-blur))
+    saturate(var(--gulkent-glass-saturate));
+  -webkit-backdrop-filter: blur(var(--gulkent-glass-blur))
+    saturate(var(--gulkent-glass-saturate));
+}
+
+html[data-theme="gulkent"] .footer .container > * {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="gulkent"] .footer__decor {
+  display: none;
+}
+
+html[data-theme="gulkent"] .footer__grid {
+  gap: clamp(24px, 3.4vw, 48px);
+}
+
+html[data-theme="gulkent"] .footer__logo {
+  align-items: center;
+  gap: 12px;
+}
+
+html[data-theme="gulkent"] .footer__logo-img {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(48, 52, 59, 0.08);
+  box-shadow: 0 10px 24px rgba(48, 52, 59, 0.08);
+}
+
+html[data-theme="gulkent"] .footer__slogan,
+html[data-theme="gulkent"] .footer__link,
+html[data-theme="gulkent"] .footer__bottom {
+  color: rgba(48, 52, 59, 0.78);
+  font-weight: 600;
+}
+
+html[data-theme="gulkent"] .footer__col-title,
+html[data-theme="gulkent"] .footer__logo strong {
+  color: var(--color-text);
+  font-weight: 900;
+}
+
+html[data-theme="gulkent"] .footer__col-title {
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+
+html[data-theme="gulkent"] .footer__links {
+  gap: 6px;
+}
+
+html[data-theme="gulkent"] .footer__link {
+  min-height: 36px;
+  font-size: 0.93rem;
+}
+
+html[data-theme="gulkent"] .footer__slogan {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+html[data-theme="gulkent"] .footer__bottom {
+  margin-top: 24px;
+  padding-top: 16px;
+  font-size: 0.84rem;
+}
+
+html[data-theme="gulkent"] .footer__bottom {
+  border-top-color: rgba(48, 52, 59, 0.08);
+}
+
+html[data-theme="gulkent"] .footer__social-link {
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(48, 52, 59, 0.06);
+}
+
+.gulkent-glass-control {
+  display: none;
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control {
+  position: fixed;
+  right: 18px;
+  bottom: 88px;
+  z-index: 70;
+  display: block;
+  font-family: var(--font-body);
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(48, 52, 59, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 900;
+  box-shadow: 0 14px 36px rgba(48, 52, 59, 0.14);
+  backdrop-filter: blur(14px) saturate(1.12);
+  -webkit-backdrop-filter: blur(14px) saturate(1.12);
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__panel {
+  position: absolute;
+  right: 0;
+  bottom: 52px;
+  width: min(320px, calc(100vw - 32px));
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--color-text);
+  box-shadow: 0 20px 60px rgba(48, 52, 59, 0.18);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+}
+
+html[data-theme="gulkent"]
+  .gulkent-glass-control:not(.is-open)
+  .gulkent-glass-control__panel {
+  display: none;
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__title {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__reset {
+  border: 0;
+  background: transparent;
+  color: var(--color-coral);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__label,
+html[data-theme="gulkent"] .gulkent-glass-control__value {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: rgba(48, 52, 59, 0.78);
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__field input[type="range"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  accent-color: var(--color-coral);
+}
+
+html[data-theme="gulkent"] .gulkent-glass-control__field input[type="color"] {
+  width: 44px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid rgba(48, 52, 59, 0.1);
+  border-radius: 10px;
+  background: transparent;
+}
+
+@media (max-width: 640px) {
+  html[data-theme="gulkent"] .gulkent-glass-control {
+    right: 12px;
+    bottom: 76px;
+  }
+}
+
+html[data-theme="gulkent"] .site-container {
+  position: relative;
+  width: min(1180px, calc(100% - 96px));
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  html[data-theme="gulkent"] .site-container {
+    width: min(900px, calc(100% - 64px));
+  }
+}
+
+@media (max-width: 640px) {
+  html[data-theme="gulkent"] .site-container {
+    width: calc(100% - 40px);
+  }
+}

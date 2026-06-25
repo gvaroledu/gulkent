@@ -1,0 +1,724 @@
+/* ============================================
+   GULKENT WAVY PASTEL THEME
+   --------------------------------------------
+   Her section farkli bir pastel renk bandinda,
+   aralarinda dalgali SVG gecis katmanlari ile.
+   Tum kurallar html[data-theme="wavy"] altinda.
+   ============================================ */
+
+/* --- Renk degiskenleri --- */
+:root {
+  --wavy-cream: #fff8f0;
+  --wavy-peach: #ffe2d6;
+  --wavy-mint: #cdf0df;
+  --wavy-pink: #ffd7e7;
+  --wavy-aqua: #d2f0eb;
+  --wavy-coral-soft: #ffd8cf;
+  --wavy-blue: #d9efff;
+  --wavy-lilac: #eadcff;
+  --wavy-yellow: #fff4c2;
+  --wavy-rose: #ffc9d9;
+}
+
+/* =============================================
+   TEMEL: Body ve wrapper'lar
+   ============================================= */
+html[data-theme="wavy"] {
+  min-height: 100%;
+  background-color: var(--wavy-cream) !important;
+}
+
+html[data-theme="wavy"] body {
+  min-height: 100%;
+  margin: 0;
+  background-color: var(--wavy-cream) !important;
+  background-image: none !important;
+  overflow-x: hidden;
+}
+
+html[data-theme="wavy"] main,
+html[data-theme="wavy"] #page-content,
+html[data-theme="wavy"] .page-wrapper,
+html[data-theme="wavy"] .site-wrapper,
+html[data-theme="wavy"] .app {
+  background-color: transparent;
+}
+
+/* Wavy temaya ozel Glassmorphic Header */
+html[data-theme="wavy"] .header__inner {
+  background: rgba(255, 255, 255, 0.42) !important;
+  backdrop-filter: blur(20px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 12px 40px rgba(48, 52, 59, 0.06) !important;
+}
+
+/* =============================================
+   SECTION RENKLERI
+   ============================================= */
+html[data-theme="wavy"] .hero {
+  background-color: var(--wavy-peach) !important;
+  background-image: none !important;
+}
+
+html[data-theme="wavy"] .hero::before,
+html[data-theme="wavy"] .hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+html[data-theme="wavy"] .quick-actions {
+  background-color: var(--wavy-mint) !important;
+}
+
+html[data-theme="wavy"] .services {
+  background-color: var(--wavy-pink) !important;
+}
+
+html[data-theme="wavy"] .clinic {
+  background-color: var(--wavy-aqua) !important;
+}
+
+html[data-theme="wavy"] .doctors {
+  background-color: var(--wavy-lilac) !important;
+}
+
+html[data-theme="wavy"] .calm-care {
+  background-color: var(--wavy-yellow) !important;
+}
+
+html[data-theme="wavy"] #asi-hesaplayici {
+  background-color: var(--wavy-blue) !important;
+}
+
+html[data-theme="wavy"] .appointment-cta {
+  background-color: var(--wavy-coral-soft) !important;
+}
+
+html[data-theme="wavy"] .contact {
+  background-color: var(--wavy-rose) !important;
+}
+
+/* =============================================
+   WAVE SEPARATOR ALTYAPI
+   Her section'in ALTINDA, bir sonraki section'in
+   renginde SVG dalga katmani olusturur.
+   ============================================= */
+html[data-theme="wavy"] .hero,
+html[data-theme="wavy"] .quick-actions,
+html[data-theme="wavy"] .services,
+html[data-theme="wavy"] .clinic,
+html[data-theme="wavy"] .doctors,
+html[data-theme="wavy"] .calm-care,
+html[data-theme="wavy"] #asi-hesaplayici,
+html[data-theme="wavy"] .appointment-cta,
+html[data-theme="wavy"] .contact {
+  position: relative;
+  isolation: isolate;
+  overflow: visible; /* dalganin tasmasina izin ver */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Mevcut section-decor'u gizle (wavy kendi dalga sistemini kullanir) */
+html[data-theme="wavy"] .services .section-decor::before,
+html[data-theme="wavy"] .clinic .section-decor::before,
+html[data-theme="wavy"] .doctors .section-decor::before,
+html[data-theme="wavy"] .calm-care .section-decor::before,
+html[data-theme="wavy"] .appointment-cta .section-decor::before,
+html[data-theme="wavy"] .contact .section-decor::before,
+html[data-theme="wavy"] .services .section-decor::after,
+html[data-theme="wavy"] .clinic .section-decor::after,
+html[data-theme="wavy"] .doctors .section-decor::after,
+html[data-theme="wavy"] .calm-care .section-decor::after,
+html[data-theme="wavy"] .appointment-cta .section-decor::after,
+html[data-theme="wavy"] .contact .section-decor::after,
+html[data-theme="wavy"] #asi-hesaplayici::before,
+html[data-theme="wavy"] #asi-hesaplayici::after {
+  border: 0 !important;
+  box-shadow: none !important;
+  display: none !important;
+}
+
+/* =============================================
+   WAVE SEPARATOR ELEMANLARI
+   Her section'in basinda ve sonunda dalgali
+   SVG gecis katmanlari .wavy-divider ile eklenir.
+   ============================================= */
+
+/* Wavy divider container'i — Section'in icinde EN ALTA yapisir */
+html[data-theme="wavy"] .wavy-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--wavy-wave-height, 90px);
+  overflow: hidden;
+  pointer-events: none;
+  line-height: 0;
+  z-index: 0;
+  transform: translateY(1px); /* Sub-pixel boslugunu kapatir */
+}
+
+/* Container icindeki div'lerin (ornegin metin, grid) dalganin ALTINDA kalmamasi icin */
+html[data-theme="wavy"] .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dalga katmanlari — 200% genislik ve farkli hizlarda yanal kaydirma */
+html[data-theme="wavy"] .wave-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+}
+
+/* Animasyon Hizi */
+html[data-theme="wavy"] .wave-layer {
+  animation: waveDrift var(--wavy-wave-duration, 18s) linear infinite;
+}
+
+/* =============================================
+   WAVY DALGA ANIMASYONU
+   ============================================= */
+@keyframes waveDrift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes waveDriftRev {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="wavy"] .wave-layer {
+    animation: none !important;
+  }
+}
+
+/* =============================================
+   SECTION PADDING DUZENLEMESI
+   Dalgalarin (90px) ustunu kapatmamasi icin 
+   padding-bottom artirildi
+   ============================================= */
+html[data-theme="wavy"] .hero {
+  padding-top: 160px !important;
+  padding-bottom: 0px; /* Quick-actions ile birlesik */
+}
+
+html[data-theme="wavy"] .quick-actions {
+  padding-top: 48px;
+  padding-bottom: 130px;
+  margin-top: 0;
+}
+
+html[data-theme="wavy"] .services,
+html[data-theme="wavy"] .clinic,
+html[data-theme="wavy"] .doctors,
+html[data-theme="wavy"] .calm-care,
+html[data-theme="wavy"] #asi-hesaplayici,
+html[data-theme="wavy"] .appointment-cta,
+html[data-theme="wavy"] .contact {
+  padding-top: 64px;
+  padding-bottom: 130px;
+}
+
+/* =============================================
+   CARD VE COMPONENT RENKLERI (Wavy temaya ozgu)
+   ============================================= */
+
+/* Quick cards — kendi pastel renkleri korunur */
+html[data-theme="wavy"] .quick-card {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 8px 32px rgba(48, 52, 59, 0.05) !important;
+  border-radius: 28px !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease !important;
+}
+html[data-theme="wavy"] .quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(48, 52, 59, 0.1) !important;
+}
+html[data-theme="wavy"] .quick-card--mint {
+  background: rgba(167, 243, 208, 0.5) !important;
+  border-color: rgba(167, 243, 208, 0.8) !important;
+}
+html[data-theme="wavy"] .quick-card--pink {
+  background: rgba(253, 164, 175, 0.5) !important;
+  border-color: rgba(253, 164, 175, 0.8) !important;
+}
+html[data-theme="wavy"] .quick-card--yellow {
+  background: rgba(253, 230, 138, 0.5) !important;
+  border-color: rgba(253, 230, 138, 0.8) !important;
+}
+html[data-theme="wavy"] .quick-card--lavender {
+  background: rgba(196, 181, 253, 0.5) !important;
+  border-color: rgba(196, 181, 253, 0.8) !important;
+}
+
+/* Service cards */
+html[data-theme="wavy"] .service-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 8px 32px rgba(48, 52, 59, 0.07) !important;
+}
+
+html[data-theme="wavy"] .service-card__body {
+  background: transparent !important;
+}
+
+/* ============================================
+   DOCTOR SECTION — WAVY PREMIUM REDESIGN
+   ============================================ */
+html[data-theme="wavy"] .doctors {
+  text-align: center;
+}
+html[data-theme="wavy"] .doctors .container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+html[data-theme="wavy"] .doctors .section-desc {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 580px;
+}
+html[data-theme="wavy"] .doctors__team-photo {
+  max-width: 860px;
+  margin: 48px auto 40px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.8),
+    0 20px 56px rgba(48, 52, 59, 0.12) !important;
+}
+html[data-theme="wavy"] .doctors__team-photo img {
+  border-radius: 32px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+html[data-theme="wavy"] .doctors__grid {
+  margin-top: 32px !important;
+  position: relative;
+  z-index: 5;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  gap: 20px !important;
+  padding-bottom: 16px !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="wavy"] .doctors__grid {
+    grid-template-columns: 1fr !important;
+    margin-top: 24px !important;
+  }
+}
+html[data-theme="wavy"] .doctor-card {
+  background: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 1) !important;
+  box-shadow:
+    0 4px 6px rgba(48, 52, 59, 0.04),
+    0 16px 40px rgba(48, 52, 59, 0.08) !important;
+  border-radius: 28px !important;
+  text-align: left;
+  transition:
+    transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.35s ease !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+html[data-theme="wavy"] .doctors__grid .doctor-card:nth-child(1) {
+  border-top: 5px solid #ffb3c6 !important;
+  background: linear-gradient(160deg, rgba(255,179,198,0.12) 0%, #fff 55%) !important;
+}
+html[data-theme="wavy"] .doctors__grid .doctor-card:nth-child(2) {
+  border-top: 5px solid #93d4f0 !important;
+  background: linear-gradient(160deg, rgba(147,212,240,0.12) 0%, #fff 55%) !important;
+}
+html[data-theme="wavy"] .doctor-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow:
+    0 8px 12px rgba(48, 52, 59, 0.04),
+    0 28px 56px rgba(48, 52, 59, 0.13) !important;
+}
+html[data-theme="wavy"] .doctor-card__body {
+  background: transparent !important;
+  padding: 28px 28px 24px !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Contact cards — premium colorful glassmorphism */
+html[data-theme="wavy"] .contact__grid {
+  gap: 24px !important;
+  margin-top: 40px !important;
+}
+html[data-theme="wavy"] .contact-card {
+  border-radius: 28px !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 12px 32px rgba(48, 52, 59, 0.04) !important;
+  padding: 36px 28px !important;
+  text-align: left;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.3s ease,
+    background 0.3s ease !important;
+}
+html[data-theme="wavy"] .contact-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(48, 52, 59, 0.08) !important;
+}
+html[data-theme="wavy"] .contact-card--mint {
+  background: rgba(167, 243, 208, 0.45) !important;
+  border-color: rgba(167, 243, 208, 0.7) !important;
+}
+html[data-theme="wavy"] .contact-card--blue {
+  background: rgba(186, 230, 253, 0.45) !important;
+  border-color: rgba(186, 230, 253, 0.7) !important;
+}
+html[data-theme="wavy"] .contact-card--lavender {
+  background: rgba(221, 214, 254, 0.45) !important;
+  border-color: rgba(221, 214, 254, 0.7) !important;
+}
+html[data-theme="wavy"] .contact-card__icon {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 50% !important;
+  width: 52px !important;
+  height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03) !important;
+  margin-bottom: 20px !important;
+  color: var(--color-coral) !important;
+}
+html[data-theme="wavy"] .contact-card__label {
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  font-size: 0.75rem !important;
+  color: var(--color-coral) !important;
+  text-transform: uppercase !important;
+}
+html[data-theme="wavy"] .contact-card__value {
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  font-size: 1.2rem !important;
+  color: var(--color-text) !important;
+  margin: 6px 0 !important;
+  display: block !important;
+  line-height: 1.3 !important;
+}
+html[data-theme="wavy"] .contact-card__hint {
+  font-size: 0.88rem !important;
+  color: var(--color-text-secondary) !important;
+  line-height: 1.5 !important;
+}
+
+/* Clinic panel */
+html[data-theme="wavy"] .clinic__panel {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 12px 40px rgba(48, 52, 59, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* ============================================
+   APPOINTMENT CTA — WAVY PREMIUM REDESIGN
+   ============================================ */
+html[data-theme="wavy"] .appointment-cta {
+  position: relative;
+  overflow: hidden;
+}
+html[data-theme="wavy"] .appointment-cta__panel {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 213, 220, 0.65) 0%,
+    rgba(255, 235, 205, 0.55) 40%,
+    rgba(200, 235, 255, 0.55) 100%
+  ) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 32px 80px rgba(48, 52, 59, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-radius: 48px !important;
+  padding: 72px 56px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 56px !important;
+  position: relative;
+  overflow: hidden;
+}
+html[data-theme="wavy"] .appointment-cta__panel::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,179,198,0.4) 0%, transparent 70%);
+  top: -100px;
+  right: 10%;
+  pointer-events: none;
+}
+html[data-theme="wavy"] .appointment-cta__panel::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(160,217,239,0.35) 0%, transparent 70%);
+  bottom: -80px;
+  left: 5%;
+  pointer-events: none;
+}
+html[data-theme="wavy"] .appointment-cta__content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+html[data-theme="wavy"] .appointment-cta__title {
+  color: var(--color-text) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+  margin-bottom: 16px !important;
+}
+html[data-theme="wavy"] .appointment-cta__desc {
+  color: var(--color-text-secondary) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  max-width: 42ch;
+}
+html[data-theme="wavy"] .appointment-cta__content .btn--white:first-child {
+  background: linear-gradient(135deg, #ff7a8a 0%, #ff9966 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 12px 32px rgba(255, 122, 138, 0.45) !important;
+  border-radius: var(--radius-pill) !important;
+  font-weight: 800 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+html[data-theme="wavy"] .appointment-cta__content .btn--white:first-child:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 20px 48px rgba(255, 122, 138, 0.55) !important;
+}
+html[data-theme="wavy"] .appointment-cta__content .btn--white:nth-child(2) {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  color: var(--color-text) !important;
+  backdrop-filter: blur(8px) !important;
+  border-radius: var(--radius-pill) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(48,52,59,0.06) !important;
+}
+html[data-theme="wavy"] .appointment-cta__visual {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  html[data-theme="wavy"] .appointment-cta__panel {
+    flex-direction: column !important;
+    padding: 48px 28px !important;
+    gap: 36px !important;
+    border-radius: 36px !important;
+    text-align: center;
+  }
+  html[data-theme="wavy"] .appointment-cta__desc {
+    max-width: 100%;
+  }
+}
+
+/* Asi hesaplayici kutu */
+html[data-theme="wavy"]
+  #asi-hesaplayici
+  [style*="background:var(--color-surface)"] {
+  background: rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 8px 32px rgba(48, 52, 59, 0.09) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* =============================================
+   FOOTER (Wavy temada krem zemin)
+   ============================================= */
+html[data-theme="wavy"] .footer {
+  background-color: var(--wavy-cream) !important;
+  padding-top: 48px;
+}
+
+html[data-theme="wavy"] .footer__decor {
+  display: block; /* Wavy'de footer dekor gorunur */
+}
+
+/* =============================================
+   HERO WAVY OZELLESTIRME
+   ============================================= */
+html[data-theme="wavy"] .hero__image {
+  border: 8px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 24px 60px rgba(48, 52, 59, 0.12);
+  filter: none;
+}
+
+/* hero__blob wavy temada gosteriliyor */
+
+html[data-theme="wavy"] .hero__visual::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.45) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =============================================
+   TYPOGRAPHY & HEADER ALIGNMENTS FOR WAVY
+   ============================================= */
+
+/* Centering and sizing all section headers for cohesive look */
+html[data-theme="wavy"] .section-kicker {
+  display: flex !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center !important;
+  width: fit-content !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="wavy"] .section-title {
+  max-width: 24ch !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--color-text) !important;
+}
+
+html[data-theme="wavy"] .section-desc {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: var(--color-text-secondary) !important;
+}
+
+/* Modern Rounded Font for Wavy titles to match soft aesthetic */
+html[data-theme="wavy"] .hero__title,
+html[data-theme="wavy"] .appointment-cta__title,
+html[data-theme="wavy"] .doctor-card__name {
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Hero Section Enhancements */
+html[data-theme="wavy"] .hero__eyebrow {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.95) !important;
+  color: var(--color-text) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="wavy"] .hero__eyebrow-dot {
+  background: var(--color-coral) !important;
+}
+
+html[data-theme="wavy"] .hero__actions .btn {
+  border-radius: var(--radius-pill) !important;
+  padding: 14px 28px !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="wavy"] .hero__actions .btn--white {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+html[data-theme="wavy"] .hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+html[data-theme="wavy"] .hero__trust-item {
+  background: rgba(255, 255, 255, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  padding: 8px 16px !important;
+  border-radius: var(--radius-pill) !important;
+  backdrop-filter: blur(8px) !important;
+  font-size: 0.85rem !important;
+}
+
+/* Doctor card typography refinements */
+html[data-theme="wavy"] .doctor-card__role {
+  display: inline-block;
+  padding: 5px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  background: rgba(255, 120, 104, 0.12) !important;
+  color: var(--color-coral) !important;
+  font-weight: 800 !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 14px !important;
+}
+html[data-theme="wavy"] .doctor-card__name {
+  color: var(--color-text) !important;
+  margin-bottom: 10px !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+html[data-theme="wavy"] .doctor-card__specialty {
+  color: var(--color-text-secondary) !important;
+  line-height: 1.65 !important;
+  font-size: 0.88rem !important;
+  margin-bottom: 22px !important;
+}
+html[data-theme="wavy"] .doctor-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-coral) !important;
+  font-weight: 800 !important;
+  font-size: 0.88rem !important;
+  transition: gap 0.25s ease, opacity 0.25s ease !important;
+}
+html[data-theme="wavy"] .doctor-card__link:hover {
+  gap: 10px !important;
+  opacity: 0.8;
+}
