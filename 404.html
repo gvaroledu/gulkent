@@ -1,0 +1,706 @@
+<!doctype html>
+<html class="light" lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sayfa Bulunamadı | Gülkent Veteriner Kliniği</title>
+    <meta name="description" content="Aradığınız sayfayı bulamadık. Lütfen ana sayfaya dönün." />
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="Gülkent Veteriner Kliniği" />
+    <meta property="og:description" content="Muayene, aşı, parazit takibi, cerrahi ve daha fazlası için Isparta Merkez'de yanınızda." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gulkentvet.com/assets/img/hekimlerimiz.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <script>
+      (() => {
+        let theme = "gulkent";
+        try {
+          theme =
+            localStorage.getItem("gulkent-theme") === "wavy"
+              ? "wavy"
+              : "gulkent";
+        } catch (error) {}
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="assets/img/gulkent-logo.png" type="image/png" />
+    <script id="tailwind-config">
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#39b77a",
+              "primary-dark": "#0e3d2d",
+              accent: "#6f63ff",
+              sand: "#eaf7f1",
+              cream: "#f7fbf9",
+              sage: "#d7f0e4",
+              ink: "#172026",
+              soft: "#eef7f3",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+              serif: ["Cormorant Garamond", "serif"],
+            },
+            boxShadow: {
+              soft: "0 24px 80px rgba(23, 59, 54, .14)",
+              button: "0 18px 38px rgba(15, 143, 127, .24)",
+            },
+            borderRadius: {
+              xl: "1rem",
+              "2xl": "2rem",
+              "3xl": "3rem",
+              "4xl": "4rem",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gulkent-theme.css" />
+    <link rel="stylesheet" href="css/wavy-theme.css" />
+    <link rel="stylesheet" href="css/theme-switcher.css" />
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="js/wavy-theme-colors.js" defer></script>
+    <script src="js/wavy-dividers.js" defer></script>
+  </head>
+
+  <body
+    class="page-home bg-[#fff9f3] text-[#30343b] font-[Manrope,sans-serif] overflow-x-hidden antialiased"
+  >
+    <!-- Sticky Mobile Bar -->
+    <div
+      id="sticky-mobile-bar"
+      class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-xl border-t border-primary/15 z-50 justify-around items-center py-3 shadow-[0_-12px_30px_rgba(23,59,54,0.12)]"
+    >
+      <a
+        href="tel:+905397992092"
+        class="flex flex-col items-center text-ink text-xs font-bold no-underline"
+      >
+        <span class="material-symbols-outlined text-2xl text-primary mb-1"
+          >call</span
+        >
+        <span data-t="mob_call">Ara</span>
+      </a>
+      <a
+        href="https://wa.me/905397992092?text=Merhaba%20G%C3%BClkent%20Veteriner%2C%20randevu%20almak%20istiyorum."
+        class="flex flex-col items-center text-ink text-xs font-bold no-underline"
+      >
+        <i class="fa-brands fa-whatsapp text-2xl text-green-500 mb-1"></i>
+        <span data-t="mob_wa">WhatsApp</span>
+      </a>
+      <button
+        type="button"
+        data-emergency-open
+        class="flex flex-col items-center text-accent text-xs font-bold no-underline"
+      >
+        <span class="material-symbols-outlined text-2xl animate-pulse mb-1"
+          >emergency</span
+        >
+        <span data-t="mob_emg">ACİL</span>
+      </button>
+    </div>
+
+    <!-- Page Decorations -->
+    <div class="page-decor" aria-hidden="true">
+      <div class="decor-blob decor-blob--1"></div>
+      <div class="decor-blob decor-blob--2"></div>
+      <div class="decor-blob decor-blob--3"></div>
+      <div class="decor-blob decor-blob--4"></div>
+
+      <!-- SVG line-art decorations -->
+      <svg
+        class="decor-svg decor-svg--paw"
+        style="top: 12%; left: 4%"
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M24 8c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zM12 14c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 14c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM16 28c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM32 28c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"
+        />
+      </svg>
+      <svg
+        class="decor-svg decor-svg--heart"
+        style="top: 35%; right: 6%"
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M16 28c-.3 0-.6-.1-.8-.3C14.5 27 4 18.5 4 12c0-3.3 2.7-6 6-6 2.1 0 4.1 1.1 5.2 2.8C15.2 8.1 15.6 8 16 8s.8.1 1.1.2C18.1 6.1 20 5 22 5c3.3 0 6 2.7 6 6 0 6.5-10.5 15-11.2 15.7-.2.2-.5.3-.8.3z"
+        />
+      </svg>
+      <svg
+        class="decor-svg decor-svg--bone"
+        style="top: 60%; right: 4%"
+        viewBox="0 0 40 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M34 4c-1.7 0-3.2.8-4.2 2.1l-3.5-1.8c.2-.5.3-1 .3-1.5C26.6 1.3 25.3 0 23.6 0S20.6 1.3 20.6 3c0 .5.1 1 .3 1.5l-3.5 1.8C16.4 5 15 4.2 13.5 4.2c-2.6 0-4.8 2.1-4.8 4.8 0 .8.2 1.5.5 2.2L5.5 13c-.7-.3-1.4-.5-2.2-.5C.8 12.5-1 14.3-1 16.5s1.8 4 3.8 4c1.3 0 2.5-.7 3.2-1.7l3.5 1.8c-.2.5-.3 1-.3 1.5 0 1.7 1.3 3 3 3s3-1.3 3-3c0-.5-.1-1-.3-1.5l3.5-1.8c.8.5 1.7.8 2.7.8 2.6 0 4.8-2.1 4.8-4.8 0-.8-.2-1.5-.5-2.2l3.5-1.8c.7.3 1.4.5 2.2.5 2.1 0 3.8-1.8 3.8-4S36.1 4 34 4z"
+        />
+      </svg>
+      <svg
+        class="decor-svg decor-svg--ball"
+        style="bottom: 15%; left: 6%"
+        viewBox="0 0 28 28"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <circle
+          cx="14"
+          cy="14"
+          r="12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <path
+          d="M14 2c0 0-4 5-4 12s4 12 4 12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <path
+          d="M14 2c0 0 4 5 4 12s-4 12-4 12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <path d="M2 14h24" fill="none" stroke="currentColor" stroke-width="2" />
+      </svg>
+      <svg
+        class="decor-svg decor-svg--fishbone"
+        style="top: 48%; left: 2%"
+        viewBox="0 0 44 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M2 10h40M10 4l-4 6 4 6M20 4l-4 6 4 6M30 4l-4 6 4 6M40 4l-4 6 4 6"
+          stroke="currentColor"
+          stroke-width="1.5"
+          fill="none"
+        />
+        <circle cx="2" cy="10" r="2" fill="currentColor" />
+      </svg>
+      <svg
+        class="decor-svg decor-svg--cat"
+        style="bottom: 30%; left: 3%"
+        viewBox="0 0 60 50"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M20 30c-8 0-14-4-14-10s6-10 14-10c2 0 4 .5 6 1.5C28 10 30 10 30 10s-2 4-4 8c-1 2-1.5 4-1.5 6 0 2.2 1.8 6 5.5 6s5.5-3.8 5.5-6c0-2-.5-4-1.5-6-2-4-4-8-4-8s2 0 4 .5c2-1 4-1.5 6-1.5 8 0 14 4 14 10s-6 10-14 10c-3 0-6-1-8-2.5-2 1.5-5 2.5-8 2.5z"
+        />
+        <circle cx="18" cy="24" r="2" fill="currentColor" />
+        <circle cx="42" cy="24" r="2" fill="currentColor" />
+        <path
+          d="M26 18c0 0 2 2 4 2s4-2 4-2"
+          stroke="currentColor"
+          stroke-width="1.5"
+          fill="none"
+        />
+      </svg>
+      <svg
+        class="decor-svg decor-svg--dog"
+        style="top: 70%; left: 20%"
+        viewBox="0 0 60 50"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M15 35c-5 0-9-4-9-9s4-9 9-9c2 0 4 .7 5.5 1.8C22 16 24 15 26 15s4 1 5.5 2.8C33 16.5 35 16 37 16c5 0 9 4 9 9s-4 9-9 9c-3 0-5.5-1.2-7.5-3-2 1.8-4.5 3-7.5 3s-5.5-1.2-7.5-3C20.5 33.8 18 35 15 35z"
+        />
+        <circle cx="19" cy="24" r="2" fill="currentColor" />
+        <circle cx="41" cy="24" r="2" fill="currentColor" />
+        <path
+          d="M28 15c0 0-1 4-2 6M32 15c0 0 1 4 2 6"
+          stroke="currentColor"
+          stroke-width="1.5"
+          fill="none"
+        />
+      </svg>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__inner">
+        <a
+          href="index.html"
+          class="header__logo"
+          aria-label="Gülkent Veteriner Kliniği"
+        >
+          <img
+            src="assets/img/gulkent-logo.png"
+            alt="Gülkent Veteriner Kliniği logosu"
+            class="header__logo-img"
+          />
+          <span class="header__logo-text">
+            <strong>Gülkent</strong>
+            <small>Veteriner Kliniği</small>
+          </span>
+        </a>
+
+        <nav class="header__nav">
+          <a class="header__nav-link active" href="index.html" data-t="nav_home"
+            >Ana Sayfa</a
+          >
+          <a class="header__nav-link" href="#hizmetler" data-t="nav_services"
+            >Hizmetler</a
+          >
+          <a class="header__nav-link" href="#hekimler" data-t="nav_doctors"
+            >Hekimler</a
+          >
+          <a class="header__nav-link" href="#klinik" data-t="nav_clinic"
+            >Klinik</a
+          >
+          <a class="header__nav-link" href="blog.html" data-t="nav_blog"
+            >Bilgi Köşesi</a
+          >
+          <a class="header__nav-link" href="iletisim.html" data-t="nav_contact"
+            >İletişim</a
+          >
+        </nav>
+
+        <div class="header__actions">
+          <a href="tel:+905397992092" class="header__phone">
+            <span class="material-symbols-outlined" style="font-size: 1.1rem"
+              >call</span
+            >
+            0539 799 20 92
+          </a>
+          <a
+            href="iletisim.html"
+            class="header__cta"
+            data-t="appointment_short"
+          >
+            <span class="material-symbols-outlined" style="font-size: 1.1rem"
+              >calendar_month</span
+            >
+            Randevu Al
+          </a>
+          <div class="header__lang">
+            <button
+              type="button"
+              class="header__lang-btn lang-btn"
+              data-lang-code="tr"
+              title="Türkçe"
+              aria-label="Türkçe"
+            >
+              <img src="https://flagcdn.com/w40/tr.png" alt="" />
+            </button>
+            <button
+              type="button"
+              class="header__lang-btn lang-btn"
+              data-lang-code="en"
+              title="English"
+              aria-label="English"
+            >
+              <img src="https://flagcdn.com/w40/gb.png" alt="" />
+            </button>
+          </div>
+          <button
+            type="button"
+            class="header__hamburger"
+            aria-label="Menü"
+            id="hamburger-btn"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="header__mobile-menu" id="mobile-menu">
+        <div class="header__mobile-panel">
+          <a class="header__mobile-link" href="index.html" data-t="nav_home"
+            >Ana Sayfa</a
+          >
+          <a class="header__mobile-link" href="#hizmetler" data-t="nav_services"
+            >Hizmetler</a
+          >
+          <a class="header__mobile-link" href="#hekimler" data-t="nav_doctors"
+            >Hekimler</a
+          >
+          <a class="header__mobile-link" href="#klinik" data-t="nav_clinic"
+            >Klinik</a
+          >
+          <a class="header__mobile-link" href="blog.html" data-t="nav_blog"
+            >Bilgi Köşesi</a
+          >
+          <a
+            class="header__mobile-link"
+            href="iletisim.html"
+            data-t="nav_contact"
+            >İletişim</a
+          >
+          <hr
+            style="
+              border: none;
+              border-top: 1px solid rgba(48, 52, 59, 0.08);
+              margin: 8px 0;
+            "
+          />
+          <a
+            class="header__mobile-link"
+            href="tel:+905397992092"
+            style="color: var(--color-coral)"
+          >
+            <span class="material-symbols-outlined" style="font-size: 1.2rem"
+              >call</span
+            >
+            0539 799 20 92
+          </a>
+          <a
+            class="header__mobile-link"
+            href="iletisim.html"
+            style="
+              background: var(--color-coral);
+              color: #fff;
+              justify-content: center;
+              border-radius: 999px;
+            "
+            data-t="appointment_short"
+          >
+            Randevu Al
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="pt-32 pb-24 md:pt-40 md:pb-32 min-h-[70vh] flex items-center justify-center">
+      <section class="container max-w-4xl mx-auto px-4 text-center">
+        <div class="mb-8">
+          <span class="material-symbols-outlined text-[120px] text-primary/50">pets</span>
+        </div>
+        <h1 class="font-serif text-6xl md:text-8xl text-ink font-bold mb-4">404</h1>
+        <h2 class="font-display text-2xl md:text-3xl text-ink/80 mb-6">Eyvah! Aradığınız sayfayı bulamadık.</h2>
+        <p class="text-lg text-ink/70 max-w-2xl mx-auto mb-10">
+          Görünüşe göre patili dostlarımızdan biri kablolarla oynamış veya aradığınız sayfa yer değiştirmiş olabilir.
+        </p>
+        <a href="index.html" class="inline-flex items-center gap-2 px-8 py-4 text-lg rounded-full text-white bg-primary hover:bg-ink transition-colors">
+          <span class="material-symbols-outlined">home</span>
+          Ana Sayfaya Dön
+        </a>
+      </section>
+    </main>
+<footer class="footer">
+      <div class="footer__decor" aria-hidden="true">
+        <svg
+          class="decor-svg decor-svg--paw"
+          style="top: 20%; right: 5%; width: 36px; height: 36px; opacity: 0.04"
+          viewBox="0 0 48 48"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M24 8c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zM12 14c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM36 14c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM16 28c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM32 28c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"
+          />
+        </svg>
+        <svg
+          class="decor-svg decor-svg--heart"
+          style="
+            bottom: 40%;
+            left: 8%;
+            width: 24px;
+            height: 24px;
+            opacity: 0.04;
+          "
+          viewBox="0 0 32 32"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M16 28c-.3 0-.6-.1-.8-.3C14.5 27 4 18.5 4 12c0-3.3 2.7-6 6-6 2.1 0 4.1 1.1 5.2 2.8C15.2 8.1 15.6 8 16 8s.8.1 1.1.2C18.1 6.1 20 5 22 5c3.3 0 6 2.7 6 6 0 6.5-10.5 15-11.2 15.7-.2.2-.5.3-.8.3z"
+          />
+        </svg>
+      </div>
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <img
+                src="assets/img/gulkent-logo.png"
+                alt="Gülkent Veteriner Kliniği"
+                class="footer__logo-img"
+              />
+              <strong style="font-size: 1.1rem; font-weight: 800"
+                >Gülkent</strong
+              >
+            </div>
+            <p class="footer__slogan" data-t="footer_slogan_long">
+              Modern veteriner bakımı, şefkatli ekip ve sakin klinik deneyimi.
+            </p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer__col-title" data-t="footer_links">
+              Hızlı Linkler
+            </h3>
+            <div class="footer__links">
+              <a
+                class="footer__link"
+                href="#hizmetler"
+                data-t="footer_link_services"
+                >Hizmetler</a
+              >
+              <a
+                class="footer__link"
+                href="#asi-hesaplayici"
+                data-t="calc_title"
+                >Aşı Takvimi</a
+              >
+              <a class="footer__link" href="#hekimler" data-t="nav_doctors"
+                >Hekimler</a
+              >
+              <a class="footer__link" href="blog.html" data-t="nav_blog"
+                >Bilgi Köşesi</a
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="footer__col-title" data-t="nav_services">Hizmetler</h3>
+            <div class="footer__links">
+              <a class="footer__link" href="#hizmetler" data-t="svc_exam_t"
+                >Muayene ve teşhis</a
+              >
+              <a class="footer__link" href="#hizmetler" data-t="svc_vaccine_t"
+                >Aşı ve parazit</a
+              >
+              <a class="footer__link" href="#hizmetler" data-t="svc_surgery_t"
+                >Cerrahi</a
+              >
+              <a class="footer__link" href="#hizmetler" data-t="svc_lab_t"
+                >Laboratuvar</a
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="footer__col-title" data-t="nav_contact">İletişim</h3>
+            <div class="footer__links">
+              <a class="footer__link" href="tel:+905397992092"
+                >+90 539 799 20 92</a
+              >
+              <a
+                class="footer__link"
+                href="https://wa.me/905397992092?text=Merhaba%20G%C3%BClkent%20Veteriner%2C%20randevu%20almak%20istiyorum."
+                >WhatsApp</a
+              >
+              <a
+                class="footer__link"
+                href="iletisim.html"
+                data-t="location_appointment"
+                >Konum ve Randevu</a
+              >
+              <a
+                class="footer__link"
+                href="https://www.google.com/maps/search/?api=1&query=G%C3%BClkent%20Veteriner%20Klini%C4%9Fi%20G%C3%BClistan%20Mah.%20127.%20Cadde%20No%3A21%2F1%20Isparta%20Merkez"
+                target="_blank"
+                rel="noopener"
+                data-t="location_open_map"
+                >Haritada Aç</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span data-t="footer_copy"
+            >&copy; 2026 Gülkent Veteriner Kliniği. Tüm hakları saklıdır.</span
+          >
+          <span style="opacity: 0.6"
+            >Gülistan Mah. 127. Cadde No:21/1, Isparta / Merkez</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- EMERGENCY MODAL -->
+    <div id="emergency-modal" class="emergency-modal" aria-hidden="true">
+      <div class="emergency-modal__backdrop" data-emergency-close></div>
+      <div
+        class="emergency-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="emergency-title"
+      >
+        <button
+          type="button"
+          class="emergency-modal__close"
+          data-emergency-close
+          aria-label="Kapat"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <p class="emergency-modal__kicker" data-t="emergency_kicker">
+          Acil Durum
+        </p>
+        <h2
+          id="emergency-title"
+          class="emergency-modal__title"
+          data-t="emergency_title"
+        >
+          Önce sakin kal, telefonu kullan.
+        </h2>
+        <p class="emergency-modal__desc" data-t="emergency_desc">
+          Zehirlenme, travma, nöbet, solunum zorluğu, yoğun kanama veya ani
+          halsizlikte beklemeden kliniği ara. WhatsApp yerine önce telefonla
+          bilgi vermen hazırlığı hızlandırır.
+        </p>
+        <div class="emergency-actions">
+          <a
+            href="tel:+905397992092"
+            class="emergency-action emergency-action--call"
+          >
+            <span class="material-symbols-outlined">call</span>
+            <span data-t="emergency_call">Hemen Ara</span>
+          </a>
+          <a
+            href="https://wa.me/905397992092?text=Merhaba%20G%C3%BClkent%20Veteriner%2C%20randevu%20almak%20istiyorum."
+            class="emergency-action emergency-action--wa"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-t="mob_wa">WhatsApp</span>
+          </a>
+        </div>
+        <ul class="emergency-list">
+          <li data-t="emergency_tip_1">
+            Zehirlenme şüphesinde kutu/etiket bilgisini yanında getir.
+          </li>
+          <li data-t="emergency_tip_2">
+            Travmada hayvanı fazla hareket ettirme, sıcak tut.
+          </li>
+          <li data-t="emergency_tip_3">
+            Nöbet geçiriyorsa ağzına elini sokma, çevresini güvenli hale getir.
+          </li>
+          <li data-t="emergency_tip_4">
+            Solunum zorluğu, idrar yapamama, yabancı cisim yutma veya doğum
+            komplikasyonunda beklemeyin.
+          </li>
+          <li data-t="emergency_tip_5">
+            WhatsApp mesajı acil ön değerlendirme için yeterli olmayabilir; önce
+            telefonla arayın.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/config.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/lang.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/core.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/vaccine-locales.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/vaccine.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/pet-video-loader.js"></script>
+    <script src="mobile-alpha-kit/mobile-alpha-canvas.js"></script>
+    <script src="js/cat-video-config.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelectorAll(".material-symbols-outlined, .fa-brands")
+          .forEach((icon) => {
+            if (!icon.hasAttribute("aria-hidden"))
+              icon.setAttribute("aria-hidden", "true");
+          });
+
+        const modal = document.getElementById("emergency-modal");
+        if (!modal) return;
+        const open = () => {
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        };
+        const close = () => {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        };
+        document.querySelectorAll("[data-emergency-open]").forEach((button) => {
+          button.addEventListener("click", open);
+        });
+        document
+          .querySelectorAll("[data-emergency-close]")
+          .forEach((button) => {
+            button.addEventListener("click", close);
+          });
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") close();
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(
+          ".service-card, .trust-stat, .process-row, .quick-card, .doctor-card, .testimonial-card, .contact-card",
+        );
+        items.forEach((item, index) => {
+          item.classList.add("reveal-on-scroll");
+          item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+        });
+        if (!("IntersectionObserver" in window)) {
+          items.forEach((item) => item.classList.add("is-visible"));
+          return;
+        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18 },
+        );
+        items.forEach((item) => observer.observe(item));
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (!hamburger || !mobileMenu) return;
+        hamburger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("open");
+          document.body.style.overflow = mobileMenu.classList.contains("open")
+            ? "hidden"
+            : "";
+        });
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("open");
+            document.body.style.overflow = "";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

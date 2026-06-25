@@ -1,0 +1,526 @@
+<!doctype html>
+<html class="light" lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hizmetler | Gülkent Veteriner Kliniği</title>
+    <meta
+      name="description"
+      content="Muayene, aşı ve parazit takibi, cerrahi, diş sağlığı, laboratuvar, görüntüleme, mikroçip ve uygun hastalarda randevulu ev ziyareti süreçleri."
+    />
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="Gülkent Veteriner Kliniği" />
+    <meta property="og:description" content="Muayene, aşı, parazit takibi, cerrahi ve daha fazlası için Isparta Merkez'de yanınızda." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gulkentvet.com/assets/img/hekimlerimiz.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <script>
+      (() => {
+        let theme = "gulkent";
+        try {
+          theme =
+            localStorage.getItem("gulkent-theme") === "wavy"
+              ? "wavy"
+              : "gulkent";
+        } catch (error) {}
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gulkent-theme.css" />
+    <link rel="stylesheet" href="css/wavy-theme.css" />
+    <link rel="stylesheet" href="css/theme-switcher.css" />
+    <link rel="icon" href="assets/img/gulkent-logo.png" type="image/png" />
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="js/wavy-theme-colors.js" defer></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f8f7f",
+              "primary-dark": "#086e62",
+              accent: "#d88958",
+              sand: "#f4e7d2",
+              cream: "#fffaf1",
+              sage: "#d9e6d1",
+              ink: "#173b36",
+              soft: "#f8f3ea",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              serif: ["Cormorant Garamond", "serif"],
+            },
+            boxShadow: {
+              soft: "0 24px 80px rgba(23, 59, 54, .14)",
+              button: "0 18px 38px rgba(15, 143, 127, .24)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-cream text-ink font-display overflow-x-hidden antialiased">
+    <div class="pet-ambient" aria-hidden="true">
+      <img
+        class="pet-floater pet-floater--cat"
+        src="assets/img/icon-cat.png"
+        alt=""
+      />
+      <img
+        class="pet-floater pet-floater--dog"
+        src="assets/img/icon-dog.png"
+        alt=""
+      />
+      <span class="pet-paw pet-paw--one">🐾</span>
+      <span class="pet-paw pet-paw--two">🐾</span>
+    </div>
+
+    <div
+      id="sticky-mobile-bar"
+      class="fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-xl border-t border-primary/15 z-50 justify-around items-center py-3 shadow-[0_-12px_30px_rgba(23,59,54,0.12)]"
+    >
+      <a
+        href="tel:+905397992092"
+        class="flex flex-col items-center text-ink text-xs font-bold no-underline"
+      >
+        <span class="material-symbols-outlined text-2xl text-primary mb-1"
+          >call</span
+        ><span>Ara</span>
+      </a>
+      <a
+        href="https://wa.me/905397992092?text=Merhaba%20G%C3%BClkent%20Veteriner%2C%20randevu%20almak%20istiyorum."
+        class="flex flex-col items-center text-ink text-xs font-bold no-underline"
+      >
+        <i class="fa-brands fa-whatsapp text-2xl text-green-500 mb-1"></i
+        ><span>WhatsApp</span>
+      </a>
+      <a
+        href="iletisim.html"
+        class="flex flex-col items-center text-accent text-xs font-bold no-underline"
+      >
+        <span class="material-symbols-outlined text-2xl animate-pulse mb-1"
+          >emergency</span
+        ><span>ACİL</span>
+      </a>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-40 px-4 pt-4">
+      <div
+        class="max-w-7xl mx-auto h-16 md:h-20 rounded-full bg-white/72 backdrop-blur-2xl border border-white/70 shadow-[0_18px_50px_rgba(23,59,54,.10)] px-5 md:px-7 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="site-logo-link group"
+          aria-label="Gülkent Veteriner Kliniği"
+        >
+          <img
+            src="assets/img/gulkent-logo.png"
+            alt="Gülkent Veteriner Kliniği logosu"
+            class="site-logo-img"
+          />
+          <span class="site-logo-text"
+            ><strong>Gülkent</strong><small>Veteriner Kliniği</small></span
+          >
+        </a>
+        <nav
+          class="hidden lg:flex items-center gap-8 text-sm font-bold text-ink/70"
+        >
+          <a class="hover:text-primary transition-colors" href="index.html"
+            >Ana Sayfa</a
+          >
+          <a class="text-primary" href="hizmetler.html">Hizmetler</a>
+          <a class="hover:text-primary transition-colors" href="blog.html"
+            >Bilgi Köşesi</a
+          >
+          <a class="hover:text-primary transition-colors" href="iletisim.html"
+            >İletişim</a
+          >
+        </nav>
+        <a
+          href="iletisim.html"
+          class="hidden sm:inline-flex h-11 px-5 md:px-6 rounded-full pastel-cta text-sm font-bold items-center justify-center hover:bg-primary transition-colors"
+        >
+          Randevu Al
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="subpage-hero">
+        <div class="subpage-shell">
+          <span class="subpage-kicker" data-t="services_kicker_new"
+            >Klinik Hizmetleri</span
+          >
+          <h1 class="subpage-title" data-t="services_title_new">
+            Her ihtiyaç için net bakım.
+          </h1>
+          <p class="subpage-lead" data-t="services_lead_new">
+            Muayeneden koruyucu hekimliğe, kısırlaştırmadan görüntüleme ve
+            laboratuvara kadar tüm süreci sakin, şeffaf ve takip edilebilir
+            şekilde planlıyoruz.
+          </p>
+        </div>
+      </section>
+
+      <section class="px-5 md:px-8 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article class="service-card">
+            <span class="material-symbols-outlined">stethoscope</span>
+            <h3 data-t="svc_exam_t">Muayene ve teşhis</h3>
+            <p data-t="svc_exam_full_d">
+              Anamnez, fizik muayene ve klinik değerlendirme sonrası gerekli
+              test planı ile tedavi önerisi.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_exam_when"
+                  >Halsizlik, kusma, ishal, deri-kulak-göz şikayeti veya rutin
+                  kontrolde.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_exam_process"
+                  >Anamnez, fizik muayene ve gerekirse test/görüntüleme planı
+                  yapılır.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_exam_follow"
+                  >Tedavi, kontrol tarihi ve evde izlenecek belirtiler
+                  paylaşılır.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card service-card--dark">
+            <span class="material-symbols-outlined">vaccines</span>
+            <h3 data-t="svc_vaccine_t">Aşı ve parazit takibi</h3>
+            <p data-t="svc_vaccine_d">
+              Yaş, sağlık durumu ve yaşam riskine göre aşı, parazit ve kontrol
+              planı.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_vaccine_when"
+                  >Yavru dönem, gecikmiş aşı, seyahat, pansiyon veya riskli
+                  temas öncesinde.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_vaccine_process"
+                  >Ateş, genel durum, parazit ve aşı geçmişi
+                  değerlendirilir.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_vaccine_follow"
+                  >Rapel tarihi, olası reaksiyonlar ve parazit planı
+                  anlatılır.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card">
+            <span class="material-symbols-outlined">biotech</span>
+            <h3 data-t="svc_lab_t">Laboratuvar</h3>
+            <p data-t="svc_lab_d">
+              Hekim gerekli görürse hemogram, biyokimya ve hızlı testlerin
+              planlanması.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_lab_when"
+                  >Muayenede kan, enfeksiyon, organ fonksiyonu veya hızlı test
+                  ihtiyacı varsa.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_lab_process"
+                  >Hekim uygun gördüğü testleri seçer; sonuçlar muayene
+                  bulgularıyla yorumlanır.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_lab_follow"
+                  >Sonuca göre tedavi, kontrol veya dış laboratuvar
+                  yönlendirmesi planlanır.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card">
+            <span class="material-symbols-outlined">surgical</span>
+            <h3 data-t="svc_surgery_t">Cerrahi ve kısırlaştırma</h3>
+            <p data-t="svc_surgery_full_d">
+              Kısırlaştırma ve yumuşak doku operasyonlarında muayene, hazırlık,
+              steril süreç ve takip.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_surgery_when"
+                  >Kısırlaştırma, yara, kitle ve uygun yumuşak doku
+                  operasyonlarında.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_surgery_process"
+                  >Muayene, gerekli kan kontrolleri, anestezi ve ağrı yönetimi
+                  planlanır.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_surgery_follow"
+                  >Dikiş bakımı, yakalık, hareket kısıtlaması ve kontrol tarihi
+                  verilir.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card">
+            <span class="material-symbols-outlined">dentistry</span>
+            <h3 data-t="svc_dental_t">Ağız ve diş sağlığı</h3>
+            <p data-t="svc_dental_d">
+              Diş taşı, ağız kokusu, diş eti ve ev bakım önerilerinin
+              değerlendirilmesi.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_dental_when"
+                  >Ağız kokusu, diş taşı, salya, çiğneme güçlüğü veya diş eti
+                  kızarıklığında.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_dental_process"
+                  >Ağız muayenesi yapılır; temizlik veya ileri işlem ihtiyacı
+                  değerlendirilir.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_dental_follow"
+                  >Ev bakım önerisi, beslenme ve kontrol aralığı
+                  paylaşılır.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card service-card--dark">
+            <span class="material-symbols-outlined">radiology</span>
+            <h3 data-t="svc_imaging_t">Görüntüleme</h3>
+            <p data-t="svc_imaging_d">
+              Muayene ile birlikte röntgen veya ultrason gerekliliğinin
+              değerlendirilmesi.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_imaging_when"
+                  >Travma, ağrı, yabancı cisim, gebelik veya iç organ
+                  değerlendirmesi gerektiğinde.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_imaging_process"
+                  >Görüntüleme bulguları muayene ve laboratuvarla birlikte
+                  yorumlanır.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_imaging_follow"
+                  >Tanı desteğine göre tedavi, sevk veya kontrol planı
+                  netleşir.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card">
+            <span class="material-symbols-outlined">badge</span>
+            <h3 data-t="svc_microchip_t">Mikroçip ve pasaport</h3>
+            <p data-t="svc_microchip_d">
+              Kimliklendirme, kayıt ve seyahat belgesi süreci için yönlendirme.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_microchip_when"
+                  >Kimliklendirme, kayıt, sahip değişikliği veya seyahat
+                  hazırlığında.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_microchip_process"
+                  >Mikroçip, kayıt ve pasaport/adres bilgisi doğru şekilde
+                  kontrol edilir.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_microchip_follow"
+                  >Seyahat ve resmi belge gereklilikleri için güncel yönlendirme
+                  yapılır.</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="service-card">
+            <span class="material-symbols-outlined">home_health</span>
+            <h3 data-t="svc_home_t">Evde hizmet</h3>
+            <p data-t="svc_home_d">
+              Uygun hastalarda randevulu ev ziyareti kapsamında muayene ve aşı
+              desteği.
+            </p>
+            <div class="service-detail-list">
+              <p>
+                <strong data-t="service_when">Ne zaman?</strong>
+                <span data-t="svc_home_when"
+                  >Taşınması zor, aşı veya basit muayene için uygun
+                  hastalarda.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_process">Süreç</strong>
+                <span data-t="svc_home_process"
+                  >Mesafe, zaman ve hastanın durumu telefonla
+                  değerlendirilir.</span
+                >
+              </p>
+              <p>
+                <strong data-t="service_follow">Takip</strong>
+                <span data-t="svc_home_follow"
+                  >Acil, cerrahi veya ileri tanı gereken durumlarda kliniğe
+                  yönlendirme yapılır.</span
+                >
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="pastel-process-section px-5 md:px-8 py-20">
+        <div
+          class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-10 items-center"
+        >
+          <div>
+            <p
+              class="text-sm uppercase tracking-[0.28em] text-sage font-extrabold"
+              data-t="process_kicker"
+            >
+              Süreç
+            </p>
+            <h2
+              class="font-serif text-5xl md:text-7xl leading-none mt-3"
+              data-t="process_title"
+            >
+              Randevudan takibe kadar aynı çizgi.
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass-panel p-6 text-ink">
+              <strong>01</strong>
+              <h3 class="font-extrabold text-xl mt-3" data-t="process_1_t">
+                Planlama
+              </h3>
+              <p class="text-ink/60 mt-2" data-t="process_1_d">
+                İhtiyaca göre doğru randevu ve hazırlık bilgisi.
+              </p>
+            </div>
+            <div class="glass-panel p-6 text-ink">
+              <strong>02</strong>
+              <h3 class="font-extrabold text-xl mt-3" data-t="process_2_t">
+                Muayene
+              </h3>
+              <p class="text-ink/60 mt-2" data-t="process_2_d">
+                Sakin yaklaşım, açık anlatım ve net tedavi planı.
+              </p>
+            </div>
+            <div class="glass-panel p-6 text-ink">
+              <strong>03</strong>
+              <h3 class="font-extrabold text-xl mt-3" data-t="process_3_t">
+                Takip
+              </h3>
+              <p class="text-ink/60 mt-2" data-t="process_3_d">
+                Kontrol, aşı ve bakım hatırlatmalarıyla süreklilik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pastel-footer px-5 md:px-8 py-14 md:py-20">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10"
+      >
+        <div>
+          <h2 class="font-serif text-5xl md:text-7xl leading-none">Gülkent</h2>
+          <p class="mt-4 text-white/55 max-w-md">
+            Modern veteriner bakımı, şefkatli ekip ve sakin klinik deneyimi.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-10 text-sm">
+          <div class="space-y-3">
+            <h3 class="font-extrabold text-white">Hızlı Linkler</h3>
+            <a class="site-footer-link" href="index.html">Ana Sayfa</a>
+            <a class="site-footer-link" href="blog.html">Bilgi Köşesi</a>
+            <a class="site-footer-link" href="iletisim.html">İletişim</a>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-extrabold text-white">İletişim</h3>
+            <a class="site-footer-link" href="tel:+905397992092"
+              >+90 539 799 20 92</a
+            >
+            <a
+              class="site-footer-link"
+              href="https://wa.me/905397992092?text=Merhaba%20G%C3%BClkent%20Veteriner%2C%20randevu%20almak%20istiyorum."
+              >WhatsApp</a
+            >
+            <a class="site-footer-link" href="iletisim.html"
+              >Konum ve Randevu</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/config.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/lang.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/core.js?v=vet-sprint-20260623-3"></script>
+  </body>
+</html>

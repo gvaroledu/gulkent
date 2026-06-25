@@ -1,0 +1,4 @@
+node_modules/
+temp/
+.chrome-footer-desktop/
+.chrome-footer-mobile/

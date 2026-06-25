@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="light" lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog Detay | Gülkent Veteriner Kliniği</title>
+    <meta
+      name="description"
+      content="Gülkent Veteriner Kliniği bilgi köşesi yazısı. İçerikler genel bilgilendirme amaçlıdır; tanı ve tedavi için veteriner hekim muayenesi gerekir."
+    />
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="Gülkent Veteriner Kliniği" />
+    <meta property="og:description" content="Muayene, aşı, parazit takibi, cerrahi ve daha fazlası için Isparta Merkez'de yanınızda." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gulkentvet.com/assets/img/hekimlerimiz.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <script>
+      (() => {
+        let theme = "gulkent";
+        try {
+          theme =
+            localStorage.getItem("gulkent-theme") === "wavy"
+              ? "wavy"
+              : "gulkent";
+        } catch (error) {}
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gulkent-theme.css" />
+    <link rel="stylesheet" href="css/wavy-theme.css" />
+    <link rel="stylesheet" href="css/theme-switcher.css" />
+    <link rel="icon" href="assets/img/gulkent-logo.png" type="image/png" />
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="js/wavy-theme-colors.js" defer></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f8f7f",
+              accent: "#d88958",
+              cream: "#fffaf1",
+              sage: "#d9e6d1",
+              ink: "#173b36",
+              soft: "#f8f3ea",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              serif: ["Cormorant Garamond", "serif"],
+            },
+            boxShadow: {
+              soft: "0 24px 80px rgba(23, 59, 54, .14)",
+              button: "0 18px 38px rgba(15, 143, 127, .24)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-cream text-ink font-display overflow-x-hidden antialiased">
+    <header class="fixed top-0 left-0 right-0 z-40 px-4 pt-4">
+      <div
+        class="max-w-7xl mx-auto h-16 md:h-20 rounded-full bg-white/72 backdrop-blur-2xl border border-white/70 shadow-[0_18px_50px_rgba(23,59,54,.10)] px-5 md:px-7 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="site-logo-link group"
+          aria-label="Gülkent Veteriner Kliniği"
+        >
+          <img
+            src="assets/img/gulkent-logo.png"
+            alt="Gülkent Veteriner Kliniği logosu"
+            class="site-logo-img"
+          />
+          <span class="site-logo-text"
+            ><strong>Gülkent</strong><small>Veteriner Kliniği</small></span
+          >
+        </a>
+        <a
+          href="blog.html"
+          class="inline-flex h-11 px-5 md:px-6 rounded-full pastel-cta text-sm font-bold items-center justify-center hover:bg-primary transition-colors"
+        >
+          Bloga Dön
+        </a>
+      </div>
+    </header>
+
+    <main class="pt-32 px-5 md:px-8 pb-20">
+      <article
+        id="post-detail"
+        class="max-w-4xl mx-auto glass-panel overflow-hidden"
+      >
+        <div class="p-10 text-center">
+          <div
+            class="w-14 h-14 rounded-full border-4 border-primary/20 border-t-primary animate-spin mx-auto"
+          ></div>
+          <p class="mt-5 text-ink/60 font-bold">Yazı yükleniyor...</p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="pastel-footer px-5 md:px-8 py-14">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8"
+      >
+        <div>
+          <h2 class="font-serif text-5xl leading-none">Gülkent</h2>
+          <p class="mt-3 text-white/55">
+            Modern veteriner bakımı, şefkatli ekip ve sakin klinik deneyimi.
+          </p>
+        </div>
+        <a class="site-footer-link" href="iletisim.html">Randevu ve İletişim</a>
+      </div>
+    </footer>
+
+    <script src="js/config.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/lang.js?v=vet-sprint-20260623-3"></script>
+    <script src="js/core.js?v=vet-sprint-20260623-3"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const root = document.getElementById("post-detail");
+        const id = new URLSearchParams(window.location.search).get("id");
+
+        if (
+          !root ||
+          !window.GulkentCore ||
+          typeof GulkentCore.loadCsvBlogPosts !== "function"
+        )
+          return;
+
+        let renderToken = 0;
+
+        function renderContent(content) {
+          const text = String(content || "");
+          if (text.indexOf("<") !== -1) return text;
+
+          const escaped = GulkentCore.escapeHtml(text).trim();
+          if (!escaped) return "";
+          return `<p>${escaped.replace(/\n\s*\n/g, "</p><p>").replace(/\n/g, "<br>")}</p>`;
+        }
+
+        async function renderPost() {
+          const token = ++renderToken;
+          const t = window.getTranslations ? window.getTranslations() : {};
+
+          root.innerHTML = `
+                    <div class="p-10 text-center">
+                        <div class="w-14 h-14 rounded-full border-4 border-primary/20 border-t-primary animate-spin mx-auto"></div>
+                        <p class="mt-5 text-ink/60 font-bold">${GulkentCore.escapeHtml(t.post_loading || t.loading || "Yazı yükleniyor...")}</p>
+                    </div>
+                `;
+
+          try {
+            const posts =
+              await GulkentCore.loadCsvBlogPosts("data/content.csv");
+            if (token !== renderToken) return;
+            const post = posts.find(
+              (item) =>
+                String(item.id) === String(id) ||
+                String(item.slug) === String(id),
+            );
+
+            if (!post) {
+              root.innerHTML = `
+                            <div class="p-10 text-center">
+                                <h1 class="font-serif text-5xl">${GulkentCore.escapeHtml(t.post_not_found || "Yazı bulunamadı.")}</h1>
+                                <a href="blog.html" class="inline-flex mt-6 rounded-full bg-primary text-white px-6 py-3 font-extrabold">${GulkentCore.escapeHtml(t.back_to_blog || "Bloga Dön")}</a>
+                            </div>
+                        `;
+              return;
+            }
+
+            document.title = `${post.title} | ${t.clinic_full_name || "Gülkent Veteriner Kliniği"}`;
+            const reviewedBy =
+              post.reviewedBy ||
+              t.reviewed_by_default ||
+              "Gülkent Veteriner Hekimleri";
+            const reviewedSuffix =
+              t.reviewed_by_suffix || "tarafından gözden geçirildi.";
+            const updatedLabel = t.last_updated || "Son güncelleme";
+            const content = renderContent(post.content || post.excerpt || "");
+
+            root.innerHTML = `
+                        <img src="${GulkentCore.escapeHtml(post.image || "assets/img/hero-bg.jpg")}" alt="${GulkentCore.escapeHtml(post.title)}" class="w-full h-[320px] md:h-[460px] object-cover" onerror="this.src='assets/img/hero-bg.jpg'">
+                        <div class="p-7 md:p-12">
+                            <div class="flex flex-wrap items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-primary">
+                                <span>${GulkentCore.escapeHtml(post.category || "Bakım")}</span>
+                                <span class="text-ink/35">${GulkentCore.escapeHtml(post.date || "")}</span>
+                            </div>
+                            <h1 class="font-serif text-5xl md:text-7xl leading-none tracking-tight mt-6">${GulkentCore.escapeHtml(post.title)}</h1>
+                            <div class="text-sm text-ink/50 mt-5 flex flex-wrap gap-3">
+                                <span>${GulkentCore.escapeHtml(reviewedBy)} ${GulkentCore.escapeHtml(reviewedSuffix)}</span>
+                                <span>${GulkentCore.escapeHtml(updatedLabel)}: ${GulkentCore.escapeHtml(post.updated || post.date || "")}</span>
+                            </div>
+                            <div class="blog-content mt-8">${content || GulkentCore.escapeHtml(post.excerpt || "")}</div>
+                            <div class="mt-8 rounded-2xl bg-sage/45 border border-primary/10 p-5 text-sm text-ink/65 leading-relaxed">
+                                ${GulkentCore.escapeHtml(t.blog_medical_note || "Bu içerik genel bilgilendirme amaçlıdır; muayene, tanı ve tedavi yerine geçmez.")}
+                            </div>
+                            <a href="blog.html" class="inline-flex mt-10 rounded-full pastel-cta px-6 py-3 font-extrabold">${GulkentCore.escapeHtml(t.back_to_blog || "Bloga Dön")}</a>
+                        </div>
+                    `;
+          } catch (error) {
+            if (token !== renderToken) return;
+            root.innerHTML = `
+                        <div class="p-10 text-center">
+                            <h1 class="font-serif text-5xl">${GulkentCore.escapeHtml(error.message || t.post_not_found || "Yazı bulunamadı.")}</h1>
+                            <a href="blog.html" class="inline-flex mt-6 rounded-full bg-primary text-white px-6 py-3 font-extrabold">${GulkentCore.escapeHtml(t.back_to_blog || "Bloga Dön")}</a>
+                        </div>
+                    `;
+          }
+        }
+
+        renderPost();
+        window.addEventListener("languagechange", () => renderPost());
+      });
+    </script>
+  </body>
+</html>

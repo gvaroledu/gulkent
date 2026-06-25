@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>Gülkent Vet | Yönetim Paneli</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/img/gulkent-logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Sadece Panele Özel Stil */
+      .admin-body {
+        --primary: #0f8f7f;
+        --dark: #173b36;
+        --red: #d9534f;
+        background: #f0f2f5;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .admin-card {
+        background: white;
+        width: 100%;
+        max-width: 600px;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: var(--dark);
+      }
+
+      .admin-input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e1e1e1;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .admin-input:focus {
+        border-color: var(--primary);
+        outline: none;
+      }
+
+      .btn-panel {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-danger {
+        background: var(--red);
+        color: white;
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid #ccc;
+        color: #666;
+      }
+
+      /* Çıktı Kutusu */
+      .output-box {
+        background: #2d2d2d;
+        color: #0f0;
+        padding: 15px;
+        border-radius: 8px;
+        font-family: monospace;
+        font-size: 14px;
+        margin-top: 20px;
+        word-break: break-all;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="admin-body">
+    <div id="login-screen" class="admin-card">
+      <h2 style="text-align: center; color: var(--dark); margin-bottom: 30px">
+        <i class="fa-solid fa-lock" style="color: var(--primary)"></i> Yönetici
+        Girişi
+      </h2>
+      <div class="form-group">
+        <input
+          type="password"
+          id="admin-password"
+          class="admin-input"
+          placeholder="Yönetici Şifresi"
+        />
+      </div>
+      <button id="btn-login" class="btn-panel btn-primary">Giriş Yap</button>
+      <a
+        href="index.html"
+        class="btn-panel btn-outline"
+        style="display: block; text-align: center; text-decoration: none"
+        >← Siteye Dön</a
+      >
+    </div>
+
+    <div id="admin-panel" class="admin-card" style="display: none">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 15px;
+        "
+      >
+        <h3 style="margin: 0">İçerik Sihirbazı</h3>
+        <button
+          id="btn-logout"
+          style="
+            background: none;
+            border: none;
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+          "
+        >
+          Çıkış Yap
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label>Türkçe Başlık</label>
+        <input
+          type="text"
+          id="p-title-tr"
+          class="admin-input"
+          placeholder="Örn: Kedilerde Tüy Bakımı"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>English Title</label>
+        <input
+          type="text"
+          id="p-title-en"
+          class="admin-input"
+          placeholder="Example: Coat Care in Cats"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Türkçe İçerik (Detay Sayfası)</label>
+        <textarea
+          id="p-content-tr"
+          class="admin-input"
+          rows="5"
+          placeholder="Blog yazısının Türkçe metnini buraya yazın..."
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>English Content (Detail Page)</label>
+        <textarea
+          id="p-content-en"
+          class="admin-input"
+          rows="5"
+          placeholder="Write the English article text here..."
+        ></textarea>
+      </div>
+
+      <button id="btn-generate" class="btn-panel btn-primary">
+        CSV Kodunu Üret
+      </button>
+
+      <div id="output-area" class="output-box">
+        <strong>Kopyalanacak Satır:</strong><br /><br />
+        <span id="csv-result"></span>
+      </div>
+      <p
+        style="
+          font-size: 12px;
+          color: gray;
+          margin-top: 10px;
+          text-align: center;
+        "
+      >
+        * Bu kodu kopyalayıp data/content.csv dosyasına yapıştırın.
+      </p>
+    </div>
+
+    <script src="js/config.js"></script>
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta property="og:title" content="Gülkent Veteriner Kliniği" />
+    <meta property="og:description" content="Muayene, aşı, parazit takibi, cerrahi ve daha fazlası için Isparta Merkez'de yanınızda." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gulkentvet.com/assets/img/hekimlerimiz.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <script>
+      const isLocalToolHost = ["localhost", "127.0.0.1", ""].includes(
+        window.location.hostname,
+      );
+      if (!isLocalToolHost) {
+        document.body.innerHTML = `
+                <div class="admin-card">
+                    <h2 style="text-align:center; color: var(--dark); margin-bottom: 12px;">İç araç yayına kapalı</h2>
+                    <p style="color:#666; line-height:1.6; text-align:center;">Bu sayfa yalnızca yerel geliştirme ortamında kullanılmalıdır.</p>
+                    <a href="index.html" class="btn-panel btn-primary" style="display:block; text-align:center; text-decoration:none;">Siteye Dön</a>
+                </div>
+            `;
+      }
+
+      // Türkçe karakter düzeltici (Slug için)
+      function slugify(text) {
+        const trMap = { çÇ: "c", ğĞ: "g", şŞ: "s", üÜ: "u", ıİ: "i", öÖ: "o" };
+        for (var key in trMap) {
+          text = text.replace(new RegExp("[" + key + "]", "g"), trMap[key]);
+        }
+        return text
+          .toLowerCase()
+          .replace(/[^\w ]+/g, "")
+          .replace(/ +/g, "-");
+      }
+
+      if (isLocalToolHost)
+        document.addEventListener("DOMContentLoaded", () => {
+          // ŞİFRE KONTROLÜ
+          document.getElementById("btn-login").addEventListener("click", () => {
+            const pass = document.getElementById("admin-password").value;
+            const adminPass =
+              window.SiteConfig && SiteConfig.admin && SiteConfig.admin.pass
+                ? SiteConfig.admin.pass
+                : "gulkent-local";
+            if (pass === adminPass) {
+              document.getElementById("login-screen").style.display = "none";
+              document.getElementById("admin-panel").style.display = "block";
+            } else {
+              alert("Hatalı şifre hocam!");
+            }
+          });
+
+          // ÇIKIŞ VE YÖNLENDİRME
+          document
+            .getElementById("btn-logout")
+            .addEventListener("click", () => {
+              if (confirm("Çıkış yapıp ana sayfaya dönmek istiyor musunuz?")) {
+                window.location.href = "index.html";
+              }
+            });
+
+          // CSV ÜRETİMİ
+          document
+            .getElementById("btn-generate")
+            .addEventListener("click", () => {
+              const titleTr = document
+                .getElementById("p-title-tr")
+                .value.trim();
+              const titleEn = document
+                .getElementById("p-title-en")
+                .value.trim();
+              const contentTr = document
+                .getElementById("p-content-tr")
+                .value.trim();
+              const contentEn = document
+                .getElementById("p-content-en")
+                .value.trim();
+
+              if (!titleTr || !titleEn || !contentTr || !contentEn) {
+                alert(
+                  "Lütfen Türkçe ve İngilizce başlık/içerik alanlarını doldurun.",
+                );
+                return;
+              }
+
+              // Otomatik Veriler
+              const id = Date.now(); // Benzersiz ID (zaman damgası)
+              const date = new Date().toLocaleDateString("tr-TR");
+              const image = "assets/img/hero-bg.jpg"; // Varsayılan resim
+
+              // CSV FORMATI: id,date,image,title_tr,content_tr,title_en,content_en
+              const csvLine = [
+                id,
+                date,
+                image,
+                titleTr,
+                contentTr,
+                titleEn,
+                contentEn,
+              ]
+                .map((value) => {
+                  const text = String(value ?? "");
+                  return '"' + text.replace(/"/g, '""') + '"';
+                })
+                .join(",");
+
+              // Ekrana Bas
+              document.getElementById("output-area").style.display = "block";
+              document.getElementById("csv-result").innerText = csvLine;
+
+              // Panoya Kopyala
+              navigator.clipboard.writeText(csvLine);
+              alert("Kod kopyalandı! Şimdi content.csv dosyasına yapıştırın.");
+            });
+        });
+    </script>
+  </body>
+</html>

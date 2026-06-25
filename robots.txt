@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /yonetim.html
+Disallow: /video-ayar.html
+Disallow: /kedi-video-ayar.html
+
+Sitemap: https://gulkentvet.com/sitemap.xml
