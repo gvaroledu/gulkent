@@ -31,8 +31,8 @@
       })();
     </script>
 
-    <!-- Siber Güvenlik Politikası (CSP) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https:; style-src 'self' https: 'unsafe-inline';" />
+    <!-- Siber Güvenlik Politikası (CSP) - Tailwind CDN ve Font Kaynaklarına İzin Verildi -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https://cdn.tailwindcss.com https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; style-src 'self' https: 'unsafe-inline';" />
     
     <!-- Kaynak Ön-bağlantı (Performance & Hız) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
